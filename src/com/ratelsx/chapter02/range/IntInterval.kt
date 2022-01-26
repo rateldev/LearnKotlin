@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
         print(i.toString() + "\t")
     }
     print("\n")
-    // 与1<=i<=4相同
+    // 与1<=i<=5相同
     for (i in 1..4) {
         print(i.toString() + "\t")
     }
