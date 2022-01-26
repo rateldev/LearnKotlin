@@ -7,12 +7,17 @@ package com.ratelsx.chapter02.variable
  * WebSite：https://ratelsx.com
  * email：ratels@foxmail.com
  *
- * 类型检查
+ * 智能类型转换
  */
 fun main(args: Array<String>) {
     val a: Any = "hello"
-    val result1 = a is String
-    val result2 = a !is String
-    println(result1)
-    println(result2)
+    if (a is String) {
+        println("a is String")
+        // 操作时，a自动转换为String类型
+        println("字符串长度：${a.length}")
+    } else if (a !is Int) {
+        println("a !is Int")
+    } else {
+        println("I don't know")
+    }
 }
