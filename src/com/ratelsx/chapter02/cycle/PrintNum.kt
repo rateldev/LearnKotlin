@@ -1,4 +1,4 @@
-package com.ratelsx.chapter02.choice
+package com.ratelsx.chapter02.cycle
 
 /**
  * @author Ratel
