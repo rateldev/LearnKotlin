@@ -7,12 +7,11 @@ package com.ratelsx.chapter02.cycle
  * WebSite：https://ratelsx.com
  * email：ratels@foxmail.com
  *
- * do…while循环
+ * for循环
  */
 fun main(args: Array<String>) {
-    var n = 5
-    do {
-        println("n=$n")
-        n--
-    } while (n > 0)
+    // 循环4次，且步长为1的递增，0..3表示[0,3] 之间的数字
+    for (i in 0..3) {   //i的值会在0~3之间变化
+        println("i => $i \t")
+    }
 }
