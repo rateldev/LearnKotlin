@@ -10,9 +10,12 @@ package com.ratelsx.chapter02.cycle
  * for循环语句
  */
 fun main(args: Array<String>) {
-    // 循环4次，且步长1的递增，0..3表示[0,3]之间的数字
-    // i的值会在0~3变化
-    // 循环语句只有一条时，可以进行简写
-    for (i in 0..3) println("i=>$i")
+    // 循环6次，且步长1的递增，0..5表示[0,5]之间
+    for (i in 0..5) {       // 外层循环
+        for (j in 0..i) {   // 内层循环
+            print("*")          // 打印*
+        }
+        print("\n")             // 换行
+    }
 
 }
