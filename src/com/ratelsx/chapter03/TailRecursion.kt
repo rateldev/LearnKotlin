@@ -7,7 +7,7 @@ package com.ratelsx.chapter03
  * WebSite：https://ratelsx.com
  * email：ratels@foxmail.com
  *
- * 尾递归函数
+ * 尾递归函数与优化
  */
 /*
 fun main(args: Array<String>) {
@@ -22,3 +22,18 @@ fun sum(num: Int, total: Int = 0): Int {
         sum(num - 1, num + total)
     }
 }*/
+
+/**
+ * 尾递归函数的优化
+ */
+fun main(args: Array<String>) {
+    println(sum(100000))
+}
+
+tailrec fun sum(num: Int, total: Int = 0): Int {
+    return if (num == 1) {
+        1 + total
+    } else {
+        sum(num - 1, num + total)
+    }
+}
