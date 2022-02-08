@@ -7,19 +7,28 @@ package com.ratelsx.chapter04
  * WebSite：https://ratelsx.com
  * email：ratels@foxmail.com
  *
- * 抽象类、接口
+ * 接口定义与继承
  */
 interface Animal {
     fun eat()
 }
 
-class Monkey(private val food: String) : Animal {
+interface Monkey : Animal {
+    fun sleep()
+}
+
+class GoldenMonkey(private val food: String) : Monkey {
+    override fun sleep() {
+        println("我是金丝猴，我喜欢吃$food")
+    }
+
     override fun eat() {
-        println("猴子正在吃$food")
+        println("我是金丝猴，我喜欢睡觉")
     }
 }
 
 fun main(args: Array<String>) {
-    val monkey = Monkey("香蕉")
-    monkey.eat()
+    val goldenMonkey = GoldenMonkey("香蕉")
+    goldenMonkey.eat()
+    goldenMonkey.sleep()
 }
