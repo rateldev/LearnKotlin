@@ -10,6 +10,8 @@ package com.ratelsx.chapter06
  * 高阶函数查找元素操作
  *
  * filter()方法
+ * filter()方法是从第1个元素至最后一个元素一一查找，
+ * 只要是有满足条件的元素就添加至列表中并返回。
  */
 fun main(args: Array<String>) {
     val list = listOf(-2, -1, 0, 1, 2)
